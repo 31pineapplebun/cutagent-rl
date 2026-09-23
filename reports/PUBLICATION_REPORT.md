@@ -46,10 +46,18 @@ None. The source and dependency manifests retain their existing versions.
 - M0 synthetic infrastructure smoke: passed with identical state replay.
 - M1A real FFmpeg/FFprobe ingestion smoke: passed with three scenes and three
   keyframes on generated, non-private media.
-- Gitleaks directory scan: no leaks found. Additional path/address checks
-  found no private network endpoint, machine path, personal email, or concrete
-  device model in the candidate files. Pattern-based checks cannot prove the
-  absence of every possible undisclosed secret.
+- Gitleaks scans of the staged files and public Git commit: no leaks found.
+  A later whole-directory scan flagged 17 generic-key patterns in generated,
+  Git-ignored smoke outputs; none of those files were staged or published.
+  Additional checks of committed content found no private network endpoint,
+  machine path, personal email, or concrete device model. Pattern-based checks
+  cannot prove the absence of every possible undisclosed secret.
+- The initial public commit was scanned again as Git history: one new root
+  commit, no historical tags, and no Gitleaks findings. Its author and
+  committer use a GitHub-provided `noreply` address.
+- After publication, anonymous access to the public repository and the new
+  commit succeeded. An old private-history commit was not accessible at the
+  public repository URL. The separate original archive remained private.
 
 ## Real experiment results
 
@@ -59,8 +67,10 @@ states that the underlying artifacts are not included here.
 
 ## Produced artifacts
 
-The publication artifact is the public Git repository itself. No model weights,
-videos, private evaluation files, or machine-specific artifacts are published.
+The publication artifact is
+[the public Git repository](https://github.com/31pineapplebun/cutagent-rl).
+No model weights, videos, private evaluation files, or machine-specific
+artifacts are published.
 
 ## Known limitations
 
@@ -71,8 +81,8 @@ dependencies, and authorized media.
 
 ## Unresolved or blocking issues
 
-No known publication blocker remains in this curated snapshot. Public visibility
-and remote commit verification are the remaining delivery checks.
+No known publication blocker remains in this curated snapshot. Future changes
+to the public repository should pass the same staged-file and history checks.
 
 ## Recommended next milestone
 
