@@ -1,0 +1,77 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cutagent-rl"
+version = "0.1.0"
+description = "Research foundation for a reproducible multimodal video agent"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.2,<2.5",
+  "pydantic>=2.10,<3",
+]
+
+[project.optional-dependencies]
+gpu = [
+  "torch==2.12.1",
+]
+perception = [
+  "accelerate==1.14.0",
+  "huggingface-hub==1.28.0",
+  "pillow==12.3.0",
+  "qwen-vl-utils==0.0.14",
+  "torchcodec==0.16.0",
+  "transformers==5.15.1",
+  "torchvision==0.27.1",
+]
+retrieval = [
+  "huggingface-hub==1.28.0",
+  "pillow==12.3.0",
+  "torch==2.12.1",
+  "transformers==5.15.1",
+]
+
+[dependency-groups]
+dev = [
+  "mypy>=1.15,<2",
+  "pytest>=8.3,<10",
+  "ruff>=0.11,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cutagent"]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers -ra"
+testpaths = ["tests", "evaluation/tests", "training/tests"]
+pythonpath = [".", "src", "evaluation/src", "training/src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["artifacts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+mypy_path = ["src", "evaluation/src", "training/src"]
+warn_unreachable = true
+pretty = true
+
+[tool.coverage.run]
+branch = true
+source = ["cutagent", "cutagent_evaluation"]

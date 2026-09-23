@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cutagent-evaluation"
+version = "0.1.0"
+description = "Offline-only private evaluation contracts for CutAgent-RL"
+requires-python = ">=3.11"
+dependencies = [
+  "cutagent-rl==0.1.0",
+  "pydantic>=2.10,<3",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cutagent_evaluation"]

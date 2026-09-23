@@ -1,0 +1,33 @@
+{
+    "benchmark_version": "cutagentbench-v0.1",
+    "generator_version": "cutagentbench-generated-media-v1",
+    "evaluator_version": "m5a-objective-evaluator-v1",
+    "metric_definition_version": "m5a-metrics-v1",
+    "failure_taxonomy_version": "m5a-failure-taxonomy-v1",
+    "split_source_counts": {
+        "train": 8,
+        "dev": 8,
+        "validation": 10,
+        "locked_test": 12,
+        "adversarial_test": 6,
+    },
+    "tasks_per_source_group": 5,
+    "split_task_counts": {
+        "train": 40,
+        "dev": 40,
+        "validation": 50,
+        "locked_test": 60,
+        "adversarial_test": 30,
+    },
+    "source_group_policy": "All source videos, derivatives, near-duplicates, and visual variants remain in one split.",
+    "locked_test_policy": "No Agent run in M5A. First official frozen prompt-only run is reserved for M5B. Every later access requires a logged declaration.",
+    "primary_agent_baseline": "M4B handoff-only hierarchical structured Agent",
+    "optional_recovery_ablation": "M4B compact recovery on observable-failure tasks only",
+    "tsr_definition": "Correct terminal behavior AND valid final artifact when required AND every mandatory objective constraint satisfied AND all required tools observed.",
+    "semantic_evaluation": {
+        "vlm_judge_enabled": false,
+        "rubric_version": "m5a-semantic-rubric-v1",
+        "human_calibration_required_before_enablement": true,
+        "required_independent_raters": 2,
+    },
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "cutagent-m1b5-real-licensed-v1",
+  "selection_frozen_at": "2026-08-22",
+  "sources": [
+    {
+      "source_id": "commons-pedestrian-area",
+      "title": "Video Codec Test pedestrian area 1080p25.y4m.webm",
+      "source_page": "https://commons.wikimedia.org/w/index.php?title=File:Video_Codec_Test_pedestrian_area_1080p25.y4m.webm&oldid=1196486240",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Video_Codec_Test_pedestrian_area_1080p25.y4m.webm",
+      "license": "CC0 1.0 Universal Public Domain Dedication",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "Taurus Media Technik; source license reviewed by Wikimedia Commons",
+      "license_evidence": "The Commons file page identifies CC0 1.0 and records a completed source-license review.",
+      "intended_coverage": ["human actions", "enter/exit frame", "static camera"],
+      "clips": [
+        {"clip_id": "pedestrian-01", "start_ms": 0, "end_ms": 3500},
+        {"clip_id": "pedestrian-02", "start_ms": 3500, "end_ms": 7000},
+        {"clip_id": "pedestrian-03", "start_ms": 7000, "end_ms": 10500},
+        {"clip_id": "pedestrian-04", "start_ms": 10500, "end_ms": 14500}
+      ]
+    },
+    {
+      "source_id": "commons-street-traffic",
+      "title": "Street traffic.webm",
+      "source_page": "https://commons.wikimedia.org/w/index.php?title=File:Street_traffic.webm&oldid=1033992316",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Street_traffic.webm",
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "attribution": "YouTube user Editor; license reviewed by Wikimedia Commons",
+      "license_evidence": "The Commons file page identifies CC BY 3.0 and records a completed license review.",
+      "intended_coverage": ["vehicle motion", "object appearance/disappearance", "urban visible text"],
+      "clips": [
+        {"clip_id": "traffic-01", "start_ms": 0, "end_ms": 5000},
+        {"clip_id": "traffic-02", "start_ms": 8000, "end_ms": 13000},
+        {"clip_id": "traffic-03", "start_ms": 16000, "end_ms": 21000},
+        {"clip_id": "traffic-04", "start_ms": 27000, "end_ms": 32000}
+      ]
+    },
+    {
+      "source_id": "commons-throwball",
+      "title": "Throwball.webm",
+      "source_page": "https://commons.wikimedia.org/w/index.php?title=File:Throwball.webm&oldid=992121247",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Throwball.webm",
+      "license": "Creative Commons Attribution 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "attribution": "julian correa; license reviewed by Wikimedia Commons",
+      "license_evidence": "The Commons file page identifies CC BY 3.0 and records a completed license review.",
+      "intended_coverage": ["human actions", "ball motion", "camera motion", "event ordering"],
+      "clips": [
+        {"clip_id": "throwball-01", "start_ms": 5000, "end_ms": 10000},
+        {"clip_id": "throwball-02", "start_ms": 35000, "end_ms": 40000},
+        {"clip_id": "throwball-03", "start_ms": 75000, "end_ms": 80000},
+        {"clip_id": "throwball-04", "start_ms": 120000, "end_ms": 125000}
+      ]
+    },
+    {
+      "source_id": "commons-drone-ball",
+      "title": "Video of Drone ball rolling.webm",
+      "source_page": "https://commons.wikimedia.org/w/index.php?title=File:Video_of_Drone_ball_rolling.webm&oldid=467446458",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Video_of_Drone_ball_rolling.webm",
+      "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "attribution": "Mgraves7452",
+      "license_evidence": "The Commons file page identifies uploader-owned work under CC BY-SA 3.0.",
+      "intended_coverage": ["object rotation", "rolling motion", "direction changes"],
+      "clips": [
+        {"clip_id": "drone-ball-01", "start_ms": 0, "end_ms": 4000},
+        {"clip_id": "drone-ball-02", "start_ms": 5000, "end_ms": 9000},
+        {"clip_id": "drone-ball-03", "start_ms": 10000, "end_ms": 14000}
+      ]
+    },
+    {
+      "source_id": "commons-wikipedia20-jimmy",
+      "title": "Wikipedia 20 - Jimmy.webm",
+      "source_page": "https://commons.wikimedia.org/w/index.php?title=File:Wikipedia_20_-_Jimmy.webm&oldid=575948169",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wikipedia_20_-_Jimmy.webm",
+      "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "attribution": "Wikimedia Foundation and the source attributions listed on the Commons file page",
+      "license_evidence": "The Commons file page identifies the composite video under CC BY-SA 3.0 and lists component attributions.",
+      "intended_coverage": ["speech", "visible text", "human subject", "edited camera shots"],
+      "clips": [
+        {"clip_id": "wikipedia20-01", "start_ms": 0, "end_ms": 4500},
+        {"clip_id": "wikipedia20-02", "start_ms": 5000, "end_ms": 9500},
+        {"clip_id": "wikipedia20-03", "start_ms": 10000, "end_ms": 14500}
+      ]
+    }
+  ]
+}
